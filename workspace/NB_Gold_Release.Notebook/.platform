@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "NB_Gold_Release",
+    "description": "Projects an allowed Silver batch onto the released Gold contract. Does not run when the schema gate fails."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c7100001-0001-4000-8000-000000000002"
+  }
+}

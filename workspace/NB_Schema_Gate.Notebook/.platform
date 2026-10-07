@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "NB_Schema_Gate",
+    "description": "Compares a landed claims file to the active Silver contract, writes a metadata-only audit event, then appends contract columns or quarantines the batch."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c7100001-0001-4000-8000-000000000001"
+  }
+}

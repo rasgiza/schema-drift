@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "PL_Schema_Gate",
+    "description": "Runs the Silver schema gate, then Gold release only if the gate succeeds."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c7100001-0001-4000-8000-000000000003"
+  }
+}
