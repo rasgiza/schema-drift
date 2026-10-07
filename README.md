@@ -61,15 +61,15 @@ Optional: `--workspace-name <name>` to change the default `schema-drift-demo`. R
 
 ## Reset for a clean run
 
-Drop the tables, then run `NB_Schema_Gate` once with the defaults. Leave `Files/incoming` alone.
+Run this in a Python cell in `NB_Schema_Gate`, then run the notebook with the defaults. Leave `Files/incoming` alone.
 
-```sql
-DROP TABLE IF EXISTS schema_contracts;
-DROP TABLE IF EXISTS schema_audit_events;
-DROP TABLE IF EXISTS quarantine_claims;
-DROP TABLE IF EXISTS silver_claims;
-DROP TABLE IF EXISTS gold_claims;
+```python
+for table in ["schema_contracts", "schema_audit_events", "quarantine_claims", "silver_claims", "gold_claims"]:
+    spark.sql(f"DROP TABLE IF EXISTS {table}")
+    print("dropped", table)
 ```
+
+A notebook cell runs one statement at a time, so a block of semicolon-separated `DROP TABLE` statements will not work. Loop in Python instead.
 
 ## Adapting it to another feed
 
